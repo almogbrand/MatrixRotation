@@ -43,10 +43,10 @@
             this.txtFrom = new System.Windows.Forms.TextBox();
             this.txtRows = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReflectUpDown = new System.Windows.Forms.Button();
-            this.btnReflectRightLeft = new System.Windows.Forms.Button();
             this.lblreflect = new System.Windows.Forms.Label();
+            this.btnReflectRightLeft = new System.Windows.Forms.Button();
+            this.btnReflectUpDown = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +87,7 @@
             // 
             // txtRotate
             // 
-            this.txtRotate.Location = new System.Drawing.Point(614, 40);
+            this.txtRotate.Location = new System.Drawing.Point(534, 40);
             this.txtRotate.Name = "txtRotate";
             this.txtRotate.Size = new System.Drawing.Size(36, 20);
             this.txtRotate.TabIndex = 8;
@@ -95,7 +95,7 @@
             // 
             // btnRotate
             // 
-            this.btnRotate.Location = new System.Drawing.Point(712, 39);
+            this.btnRotate.Location = new System.Drawing.Point(747, 39);
             this.btnRotate.Name = "btnRotate";
             this.btnRotate.Size = new System.Drawing.Size(75, 23);
             this.btnRotate.TabIndex = 9;
@@ -106,7 +106,7 @@
             // lblRotateMatrix
             // 
             this.lblRotateMatrix.AutoSize = true;
-            this.lblRotateMatrix.Location = new System.Drawing.Point(531, 43);
+            this.lblRotateMatrix.Location = new System.Drawing.Point(451, 43);
             this.lblRotateMatrix.Name = "lblRotateMatrix";
             this.lblRotateMatrix.Size = new System.Drawing.Size(83, 13);
             this.lblRotateMatrix.TabIndex = 8;
@@ -115,16 +115,16 @@
             // lblRotateMatrix2
             // 
             this.lblRotateMatrix2.AutoSize = true;
-            this.lblRotateMatrix2.Location = new System.Drawing.Point(651, 43);
+            this.lblRotateMatrix2.Location = new System.Drawing.Point(571, 43);
             this.lblRotateMatrix2.Name = "lblRotateMatrix2";
-            this.lblRotateMatrix2.Size = new System.Drawing.Size(45, 13);
+            this.lblRotateMatrix2.Size = new System.Drawing.Size(175, 13);
             this.lblRotateMatrix2.TabIndex = 9;
-            this.lblRotateMatrix2.Text = "degrees";
+            this.lblRotateMatrix2.Text = "degrees. (0 for SPIN, CTRL to stop)";
             // 
             // lblFill2
             // 
             this.lblFill2.AutoSize = true;
-            this.lblFill2.Location = new System.Drawing.Point(653, 10);
+            this.lblFill2.Location = new System.Drawing.Point(648, 10);
             this.lblFill2.Name = "lblFill2";
             this.lblFill2.Size = new System.Drawing.Size(16, 13);
             this.lblFill2.TabIndex = 13;
@@ -133,7 +133,7 @@
             // lblFill1
             // 
             this.lblFill1.AutoSize = true;
-            this.lblFill1.Location = new System.Drawing.Point(456, 10);
+            this.lblFill1.Location = new System.Drawing.Point(451, 10);
             this.lblFill1.Name = "lblFill1";
             this.lblFill1.Size = new System.Drawing.Size(159, 13);
             this.lblFill1.TabIndex = 12;
@@ -141,7 +141,7 @@
             // 
             // btnFill
             // 
-            this.btnFill.Location = new System.Drawing.Point(712, 6);
+            this.btnFill.Location = new System.Drawing.Point(747, 6);
             this.btnFill.Name = "btnFill";
             this.btnFill.Size = new System.Drawing.Size(75, 23);
             this.btnFill.TabIndex = 5;
@@ -151,7 +151,7 @@
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(670, 7);
+            this.txtTo.Location = new System.Drawing.Point(665, 7);
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(36, 20);
             this.txtTo.TabIndex = 4;
@@ -159,7 +159,7 @@
             // 
             // txtFrom
             // 
-            this.txtFrom.Location = new System.Drawing.Point(614, 7);
+            this.txtFrom.Location = new System.Drawing.Point(609, 7);
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(36, 20);
             this.txtFrom.TabIndex = 3;
@@ -198,24 +198,14 @@
             this.panel1.Size = new System.Drawing.Size(834, 65);
             this.panel1.TabIndex = 14;
             // 
-            // panel2
+            // lblreflect
             // 
-            this.panel2.AutoSize = true;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 65);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 546);
-            this.panel2.TabIndex = 15;
-            // 
-            // btnReflectUpDown
-            // 
-            this.btnReflectUpDown.Location = new System.Drawing.Point(88, 34);
-            this.btnReflectUpDown.Name = "btnReflectUpDown";
-            this.btnReflectUpDown.Size = new System.Drawing.Size(75, 23);
-            this.btnReflectUpDown.TabIndex = 6;
-            this.btnReflectUpDown.Text = "Up/Down";
-            this.btnReflectUpDown.UseVisualStyleBackColor = true;
-            this.btnReflectUpDown.Click += new System.EventHandler(this.btnReflectUp_Click);
+            this.lblreflect.AutoSize = true;
+            this.lblreflect.Location = new System.Drawing.Point(16, 39);
+            this.lblreflect.Name = "lblreflect";
+            this.lblreflect.Size = new System.Drawing.Size(72, 13);
+            this.lblreflect.TabIndex = 18;
+            this.lblreflect.Text = "Reflect Matrix";
             // 
             // btnReflectRightLeft
             // 
@@ -227,14 +217,24 @@
             this.btnReflectRightLeft.UseVisualStyleBackColor = true;
             this.btnReflectRightLeft.Click += new System.EventHandler(this.btnReflectRightLeft_Click);
             // 
-            // lblreflect
+            // btnReflectUpDown
             // 
-            this.lblreflect.AutoSize = true;
-            this.lblreflect.Location = new System.Drawing.Point(16, 39);
-            this.lblreflect.Name = "lblreflect";
-            this.lblreflect.Size = new System.Drawing.Size(72, 13);
-            this.lblreflect.TabIndex = 18;
-            this.lblreflect.Text = "Reflect Matrix";
+            this.btnReflectUpDown.Location = new System.Drawing.Point(88, 34);
+            this.btnReflectUpDown.Name = "btnReflectUpDown";
+            this.btnReflectUpDown.Size = new System.Drawing.Size(75, 23);
+            this.btnReflectUpDown.TabIndex = 6;
+            this.btnReflectUpDown.Text = "Up/Down";
+            this.btnReflectUpDown.UseVisualStyleBackColor = true;
+            this.btnReflectUpDown.Click += new System.EventHandler(this.btnReflectUp_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 65);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(0, 546);
+            this.panel2.TabIndex = 15;
             // 
             // Form1
             // 
