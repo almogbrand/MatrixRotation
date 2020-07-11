@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Hello :)
+ * This simple app allowes a user to build a dynamic NxN matrix.
+ * Add random values to it, and rotate the matrix. 
+ */
+
+
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +17,7 @@ namespace almog
         // Add support for MxN matrix. as M!=N
             // (1) update Tranpose 
             // (2) cancele rows == cols check when building a new matrix 
-
+            
         // Change these in order to define matrix (x,y) starting point and spaces between cells
         public const int X_START = 10;
         public const int Y_START = 10;
@@ -128,6 +135,7 @@ namespace almog
                 MessageBox.Show("Currently supporting only a NxN matrix");
             } else
             {
+
                 txtRotate.Enabled = true;
                 btnRotate.Enabled = true;
                 lblRotateMatrix.ForeColor = Color.FromArgb(0, 0, 0);
